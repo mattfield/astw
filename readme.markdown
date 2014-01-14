@@ -2,20 +2,15 @@
 
 walk the ast
 
-[![browser support](http://ci.testling.com/substack/astw.png)](http://ci.testling.com/substack/astw)
-
-[![build status](https://secure.travis-ci.org/substack/astw.png)](http://travis-ci.org/substack/astw)
-
-This module is a faster version of
-[falafel](https://github.com/substack/node-falafel)
-that only does ast walking and `.parent` tracking, not source transforms.
+*NB: This is a fork of substack's [astw](https://npmjs.org/package/astw) module modified to
+allow passing of esprima parse options. All credit for the module goes to substack.*
 
 # example
 
 ``` js
-var astw = require('astw');
+var astw = require('astw-opts');
 var deparse = require('escodegen').generate;
-var walk = astw('4 + beep(5 * 2)');
+var walk = astw('4 + beep(5 * 2)', { loc: true,  });
 
 walk(function (node) {
     var src = deparse(node);
@@ -29,9 +24,10 @@ walk(function (node) {
 var astw = require('astw')
 ```
 
-## var walk = astw(src)
+## var walk = astw(src[, opts])
 
-Return a `walk()` function from the source string or ast object `src`.
+Return a `walk()` function from the source string or ast object `src` with optional
+parse config options for esprima.
 
 ## walk(cb)
 
@@ -44,7 +40,7 @@ reference to the parent node.
 With [npm](https://npmjs.org) do:
 
 ```
-npm install astw
+npm install astw-opts
 ```
 
 # license

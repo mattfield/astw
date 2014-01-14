@@ -1,7 +1,7 @@
 {
-    "name": "astw",
-    "version": "0.0.0",
-    "description": "walk the ast with references to parent nodes",
+    "name": "astw-opts",
+    "version": "0.0.1",
+    "description": "walk the ast with references to parent nodes (with added support for esprima parse opts)",
     "main": "index.js",
     "dependencies": {
         "esprima": "1.0.2"
@@ -27,9 +27,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/substack/astw.git"
+        "url": "git://github.com/mattfield/astw-opts.git"
     },
-    "homepage": "https://github.com/substack/astw",
+    "homepage": "https://github.com/mattfield/astw-opts",
     "keywords": [
         "ast",
         "walk",
@@ -37,9 +37,9 @@
         "esprima"
     ],
     "author": {
-        "name": "James Halliday",
-        "email": "mail@substack.net",
-        "url": "http://substack.net"
+        "name": "Matt Field",
+        "email": "m.field42@gmail.com",
+        "url": "http://mattfield.github.io"
     },
     "license": "MIT"
 }
