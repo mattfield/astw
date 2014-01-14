@@ -10,7 +10,7 @@ allow passing of esprima parse options. All credit for the module goes to substa
 ``` js
 var astw = require('astw-opts');
 var deparse = require('escodegen').generate;
-var walk = astw('4 + beep(5 * 2)', { loc: true,  });
+var walk = astw('4 + beep(5 * 2)', { loc: true });
 
 walk(function (node) {
     var src = deparse(node);
